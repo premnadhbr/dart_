@@ -1,7 +1,16 @@
 void main() {
-String text1 = 'this is a single line string';
-String text2 = '''this is a multiline
-	line string with a break''';
-print(text1);
-print(text2);
+  List<String> actorsName = [
+    'mohanlal',
+    'mamooty',
+    'pritviraj',
+    'raj',
+    'me',
+    'kajol',
+    
+  ];
+  int count = 0;
+  while (count < actorsName.length) {
+    print(actorsName[count]);
+    count++;
+  }
 }

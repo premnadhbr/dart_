@@ -1,43 +1,22 @@
-
 void main() {
-  Student student = Student(name: 'premnadh', age: 23, marks: [10, 20, 30]);
+  Premnadh premnadh = Premnadh();
 
-  Student student1 = Student.done(age: 12, marks: [12, 22, 33], name: 'Alli');
+  int result = Premnadh.hundreadth(10);
+  print(result);
 
-  Student student2 =
-      Student.checking(age: 33, marks: [22, 33, 44, 55], name: 'Arya');
-  // student.studentDetails();
+  String hello = Premnadh.helloPlus('premnadh');
+  print(hello);
 }
 
-class Student {
-  String name;
-  num age;
-  List<num> marks;
-  Student({
-    required this.name,
-    required this.age,
-    required this.marks,
-  }) {
-    print("normall");
+//we can access a class functions or variable through making an obj and or making the class to static  thats the easy way to do that.
+
+class Premnadh {
+  //return type function and parameter
+  static int hundreadth(int n) {
+    return n * 100;
   }
 
-  Student.checking({
-    required this.age,
-    required this.marks,
-    required this.name,
-  }) {
-    print('checking');
-  }
-
-  Student.done({
-    required this.age,
-    required this.marks,
-    required this.name,
-  }) {
-    print('Done');
-  }
-
-  void studentDetails() {
-    print("Student name :$name his age :$age his marks $marks");
+  static String helloPlus(String name) {
+    return name + " Hello";
   }
 }

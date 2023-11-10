@@ -1,23 +1,30 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-void main() {
-  Student arun = Student(test: "Arun", testing: 1);
-  arun.printTest();
 
-  Student midhun = Student(test: "Midhun", testing: 2);
-  midhun.printTest();
+void main() {
+  Student student =
+      Student(className: "12TH", marks: [10, 20, 30], name: 'Premnadh');
+
+  student.printDetails();
 }
 
 class Student {
-  String test;
-  int testing;
+  String name;
+  String className;
+  var marks;
 
-  Student({required this.test, required this.testing}) {
-    this.test = test;
-    this.testing = testing;
+  Student({
+    required this.className,
+    required this.marks,
+    required this.name,
+  }) {
+    this.className = className;
+    this.marks = marks;
+    this.name = name;
   }
 
-  void printTest() {
-    print('Name' + test);
-    print("Class :" + testing.toString());
+  printDetails() {
+    print("Student Details");
+    print("class Name :" + this.className);
+    print("marks :" + this.marks.toString());
+    print("Name :" + this.name);
   }
 }

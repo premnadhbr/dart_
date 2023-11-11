@@ -1,4 +1,10 @@
-void main() {}
+void main() {
+  SearchAll searchAll = SearchAll();
+  searchAll.search();
+  searchAll.message();
+  SearchImage searchImage = SearchImage();
+  SearchVideoResult searchVideoResult = SearchVideoResult();
+}
 
 abstract class Google {
   void search();

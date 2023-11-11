@@ -1,25 +1,30 @@
-// multiple inheritance in dart
+void main() {}
 
-void main() {
-  C c = C();
+abstract class Google {
+  void search();
 
-}
-
-class A {
-  A() {
-    print("Hello...");
+  void message() {
+    print("Thank you for using google");
   }
-  
 }
 
-class B extends A{
-  B() {
-    print("Hey...");
+class SearchAll extends Google {
+  @override
+  void search() {
+    print("search all results..");
   }
-  
- 
 }
 
-class C {
-  B b = B();
+class SearchImage extends Google {
+  @override
+  void search() {
+    print("Image search result");
+  }
+}
+
+class SearchVideoResult extends Google {
+  @override
+  void search() {
+    print("Video result found");
+  }
 }

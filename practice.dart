@@ -1,9 +1,16 @@
-void main() {
-  // ignore: equal_elements_in_set
-  Set<int> fruits = {1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6};
-  print(fruits);
+enum me { constant_value1, constant_value2, constant_value3 }
 
-  Set<int> numbers = {10, 20, 30, 40, 50, 1, 2, 3, 4, 5, 6, 7};
-  print(numbers);
-  
+void main() {
+  const mee =me.constant_value1;
+  switch (mee) {
+    case me.constant_value1:
+      print("One");
+      break;
+    case me.constant_value2:
+      print("Two");
+      break;
+    case me.constant_value3:
+      print("Three");
+      break;
+  }
 }

@@ -2,7 +2,8 @@ void main() {
   // fun();
   print(funOne());
   meen(12, 22);
-  sum(22, 22);
+  int a = sum(1, 1);
+  print(a);
 }
 
 // no argument and no return type
